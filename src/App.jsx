@@ -21,9 +21,9 @@ const router = createBrowserRouter([
     children: [{ index: true, element: <Favorite /> }], // Página de favoritos
   },
   {
-    path: "/alienDetails/:id",
-    element: <AppLayout />, // Usa el mismo Layout con Header
-    children: [{ index: true, element: <AlienDetails /> }], // Página de favoritos
+    path: "/alienDetails",
+    element: <AppLayout />,
+    children: [{ path: ":id", element: <AlienDetails /> }],
   },
 ]);
 

@@ -7,12 +7,10 @@ function AlienDetails() {
   const { id } = useParams();
   const { getAlien, currentAlien } = useAliens();
   console.log(id);
-  useEffect(
-    function () {
-      getAlien(id);
-    },
-    [id, getAlien],
-  );
+  useEffect(() => {
+    console.log("object");
+    getAlien(id);
+  }, [id, getAlien]);
   //   if (!currentAlien) {
   //     return <p className="text-center text-white">Cargando...</p>;
   //   }
@@ -42,7 +40,7 @@ function AlienDetails() {
           <div className="mt-4">
             <h2 className="text-lg font-semibold">Habilidades</h2>
             <ul className="list-inside list-disc text-gray-400">
-              {habilidades.map((habilidad, index) => (
+              {habilidades?.map((habilidad, index) => (
                 <li key={index}>{habilidad}</li>
               ))}
             </ul>
@@ -50,7 +48,7 @@ function AlienDetails() {
 
           {/* Botón de Transformación y Favoritos */}
           <div className="mt-6 flex items-center">
-            <ButtonTransform alienName={nombre} />
+            <ButtonTransform selectedAlien={currentAlien} />
             <button className="ml-4 rounded-lg border border-gray-500 bg-transparent px-4 py-2 text-white hover:bg-gray-700">
               ❤️
             </button>

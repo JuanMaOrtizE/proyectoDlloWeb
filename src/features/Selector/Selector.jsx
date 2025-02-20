@@ -23,11 +23,6 @@ function Selector({ aliens }) {
   //   console.log("Valor de selectedAlien:", selectedAlien);
   // }, [selectedAlien]);
 
-  const handleTransform = () => {
-    alert(`Transformándose en ${selectedAlien?.nombre}`);
-    // Aquí irá la lógica para transformar al alien usando API Context más adelante
-  };
-
   return (
     <div className="my-10 rounded bg-gray-800 p-4 text-white">
       <h2 className="mb-2 text-xl">Selector de Aliens</h2>
@@ -53,7 +48,7 @@ function Selector({ aliens }) {
       {selectedAlien && (
         <div>
           <p>Alien seleccionado: {selectedAlien.name}</p>
-          <ButtonTransform onTransform={handleTransform} />
+          <ButtonTransform selectedAlien={selectedAlien} />
         </div>
       )}
 
