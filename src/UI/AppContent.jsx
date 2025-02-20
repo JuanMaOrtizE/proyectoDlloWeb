@@ -11,7 +11,7 @@ function AppContent() {
       <Alien aliens={aliens} /> {/* Lista de aliens */}
     </div>
   );
-}
+ }
 
 export async function loader() {
   const aliens = await getAliens();
