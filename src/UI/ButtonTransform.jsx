@@ -1,11 +1,15 @@
+import { useAliens } from "../contexts/AliensContext";
+
 function ButtonTransform({ selectedAlien }) {
+  const { transformAlien } = useAliens();
   const handleTransform = () => {
-    alert(`Transformándose en ${selectedAlien?.nombre}`);
-    // Aquí irá la lógica para transformar al alien usando API Context más adelante
+    if (selectedAlien) {
+      transformAlien(selectedAlien);
+    }
   };
   return (
     <button
-      className="mt-2 rounded bg-green-500 px-4 py-2 hover:bg-green-600"
+      className="rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700"
       onClick={handleTransform}
     >
       Transformar
