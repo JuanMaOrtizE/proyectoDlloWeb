@@ -20,12 +20,12 @@
 /*}*/
 
 /* Asegurar que la raíz ocupe toda la pantalla */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Evita scrolls innecesarios */
-}
+/*html, body {*/
+/*    height: 100%;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    overflow: hidden; !* Evita scrolls innecesarios *!*/
+/*}*/
 
 .home-container {
     display: flex;
