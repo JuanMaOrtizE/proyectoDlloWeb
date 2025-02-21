@@ -44,13 +44,16 @@
     /*background-position: 60% center; !* Moviendo la imagen un poco a la derecha *!*/
 }
 
+
 .home-text h1 {
+    font-family: "Saira Stencil One", serif;
+    font-style: normal;
     font-size: 9rem;
     font-weight: bold;
     margin: 0;
     opacity: 0;
     transform: translateX(-100px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 1.3s ease-out, transform 1.5s ease-out;
 }
 
 .home-text.animate h1 {
