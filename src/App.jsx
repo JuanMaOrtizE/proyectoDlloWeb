@@ -30,7 +30,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <AliensProvider>
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
     </AliensProvider>
   );
 }
